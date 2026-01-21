@@ -10,7 +10,7 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 try:
-    server_socket.bind((IP_address, Port))
+    server_socket.bind(("0.0.0.0", Port))
     server_socket.listen()
     print("=" * 60)
     print("         SAJILO CHAT SERVER")
